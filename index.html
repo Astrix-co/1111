@@ -211,7 +211,7 @@
 
         .about-stats {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
@@ -498,9 +498,9 @@
 <h2 class="section-title">About Astrix</h2>
 <div class="about-content">
 <div class="about-text">
-<p>Astrix is a dynamic content creation and marketing agency specializing in helping brands and influencers connect, grow, and engage with their audience. We deliver high-quality videos, social media strategies, and creative campaigns that drive real results.</p>
+<p>Astrix is a dynamic content creation and marketing agency specializing in helping brands and influencers connect, grow, and engage with their audience.</p>
+<p>Our comprehensive services include professional strategic social media management, brand development, influencer partnerships.</p>
 <p>Our team of creative professionals combines technical expertise with artistic vision to produce content that not only looks stunning but also performs exceptionally in the digital landscape.</p>
-<p>Based in Mumbai, Maharashtra, we serve clients globally, bringing a unique blend of local insights and international standards to every project.</p>
 </div>
 <div class="about-stats">
 <div class="stat">
@@ -510,10 +510,6 @@
 <div class="stat">
 <div class="stat-number">★</div>
 <div class="stat-label">Premium Quality</div>
-</div>
-<div class="stat">
-<div class="stat-number">⚡</div>
-<div class="stat-label">Fast Delivery</div>
 </div>
 <div class="stat">
 <div class="stat-number">🎯</div>
@@ -529,11 +525,6 @@
 <h2 class="section-title">Our Services</h2>
 <div class="services-grid">
 <div class="service-card">
-<div class="service-icon">🎥</div>
-<h3>Video Production</h3>
-<p>Professional video production and editing services that capture your brand's essence and engage your audience with compelling visual storytelling.</p>
-</div>
-<div class="service-card">
 <div class="service-icon">📱</div>
 <h3>Social Media Content</h3>
 <p>Strategic social media content creation that builds communities, drives engagement, and amplifies your brand's voice across all platforms.</p>
@@ -548,11 +539,6 @@
 <h3>Influencer Management</h3>
 <p>Expert influencer collaborations and management services that expand your reach and create authentic partnerships with content creators.</p>
 </div>
-<div class="service-card">
-<div class="service-icon">💡</div>
-<h3>Creative Campaigns</h3>
-<p>Innovative creative campaign development that breaks through the noise and delivers measurable results for your brand.</p>
-</div>
 </div>
 </div>
 </section>
@@ -563,7 +549,7 @@
 <div class="contact-content">
 <div class="contact-info">
 <h3>Let's Create Something Amazing</h3>
-<p>Ready to elevate your brand with premium content and strategic marketing? We're here to help you connect with your audience and achieve your goals.</p>
+<p>Ready to elevate your brand with premium content and strategic marketing?</p>
 <div class="contact-details">
 <div class="contact-item">
 <i>📧</i>
@@ -602,12 +588,9 @@
 </div>
 </div>
 </section>
-
-
 <script>
     document.getElementById("contactForm").addEventListener("submit", async function(e) {
         e.preventDefault();
-
         const form = e.target;
         const formData = new FormData(form);
         const response = await fetch(form.action, {
@@ -615,13 +598,11 @@
             body: formData,
             headers: { 'Accept': 'application/json' }
         });
-
         if (response.ok) {
             form.reset();
             const successMsg = document.getElementById("formSuccess");
             successMsg.style.display = "block";
             successMsg.style.opacity = "1";
-
             setTimeout(() => {
                 successMsg.style.opacity = "0";
                 setTimeout(() => successMsg.style.display = "none", 500);
